@@ -5,7 +5,7 @@ export default function Header(props) {
         <span>Issue Tracker</span>
         <nav>
             {
-                props.links.map(link => (<a className="Nav-link" href={link.url}>{link.name}</a>))
+                props.links.map((link, index) => (<a key={index} className="Nav-link" href={link.url}>{link.name}</a>))
             }
         </nav>
     </header>)
