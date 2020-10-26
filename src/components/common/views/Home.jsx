@@ -1,6 +1,8 @@
 import React, {useState, useEffect} from 'react'
 import Card from "../Card";
 
+import {fetchIssues} from "../../../api/issues"
+
 export default function Home() {
     const [issues, setIssues] = useState([])
   
@@ -10,14 +12,6 @@ export default function Home() {
         setIssues(issues)
       }).catch(error => console.error(error.message, error.stack))
     }, [])
-  
-    const fetchIssues = async () => {
-      const options = {
-        method: 'GET'
-      }
-  
-      return (await fetch('http://localhost:8000/issues', options)).json()
-    }
 
     return (
         <>
