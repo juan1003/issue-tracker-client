@@ -3,7 +3,7 @@ import { useState } from 'react'
 
 import {login} from '../../../api/user'
 
-export default function Login(props) {
+export default function Login() {
 
     const [username, setUsername] = useState("")
     const [password, setPassword] = useState("")
