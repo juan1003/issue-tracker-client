@@ -28,7 +28,7 @@ export default function Home() {
       )
     } else {
       return (
-        <p style={styles.watermark}>No Issues remaining</p>
+        <p style={styles.watermark}>You are cool to go! 😎👌</p>
       )
     }
 }
