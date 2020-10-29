@@ -13,20 +13,33 @@ export default function Home() {
       }).catch(error => console.error(error.message, error.stack))
     }, [])
 
-    return (
-        <>
-            {
-          issues ? issues.map((issue, index) => {
-            return (<Card 
-                      key={index}
-                      name={issue.full_name} 
-                      username={issue.username} 
-                      title={issue.title} 
-                      description={issue.description} 
-                      comments={issue.comments}
-                    />)
-          }) : <></>
-        }
-        </>
-    )
+    if(issues.length > 0) {
+      return (
+        issues.map((issue, index) => {
+          return (<Card 
+                    key={index}
+                    name={issue.full_name} 
+                    username={issue.username} 
+                    title={issue.title} 
+                    description={issue.description} 
+                    comments={issue.comments}
+                  />)
+        })
+      )
+    } else {
+      return (
+        <p style={styles.watermark}>No Issues remaining</p>
+      )
+    }
+}
+
+const styles = {
+  watermark: {
+    textAlign: 'center',
+    fontSize: '2.4em',
+    color: 'rgba(27,119,183,0.65)',
+    border: '2px solid rgba(27,119,183,0.65)',
+    borderRadius: '5px',
+    padding: '15px'
+  }
 }
