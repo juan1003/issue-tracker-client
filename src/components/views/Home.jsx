@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
-import Card from "../Card";
+import Card from "../common/Card";
 
-import {fetchIssues} from "../../../api/issues"
+import {fetchIssues} from "../../api/issues"
 
 export default function Home() {
     const [issues, setIssues] = useState([])
@@ -28,7 +28,7 @@ export default function Home() {
       )
     } else {
       return (
-        <p style={styles.watermark}>You are cool to go! 😎👌</p>
+        <p style={styles.watermark}>No issues has been posted.</p>
       )
     }
 }

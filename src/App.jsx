@@ -8,9 +8,9 @@ import {
   Route
 } from "react-router-dom"
 
-import Home from './components/common/views/Home'
-import Login from './components/common/views/Login'
-import Register from './components/common/views/Register'
+import Home from './components/views/Home'
+import Login from './components/views/Login'
+import Register from './components/views/Register'
 
 function App() {
   const [links] = useState([

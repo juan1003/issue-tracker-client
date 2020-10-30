@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 
-import {register} from "../../../api/user"
+import {register} from "../../api/user"
 
 export default function Register() {
     

@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 
-import {login} from '../../../api/user'
+import {login} from '../../api/user'
 
 export default function Login() {
 
